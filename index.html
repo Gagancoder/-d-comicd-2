@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Virtual Comics</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/home.js"></script>
+  </head>
+  <body>
+
+    <a-scene background="color:#90caf9">
+      
+      <a-circle
+      id="ground"
+      color="#78909c"
+      radius="222"
+      rotation="-90 0 0"
+      >
+
+      </a-circle>
+      <a-sky id="poster-container" radius="5000" color="#98DAFC"></a-sky>
+
+      <!-- poster Container -->
+      <a-entity
+      id="poster-container" 
+      home
+      effect
+      >
+
+      </a-entity>
+
+      <!-- CAMERA -->
+      <a-camera id="camera" wasd-controls="enabled:false;" position=" 0 10 20">
+        <!-- App Title -->
+        <a-entity
+          id="app-title"
+          position="0 0.73 -1"
+          text="font: exo2bold; align: center; width: 2; color: #000; value: It's time to Read virtually!"
+        >
+          <a-entity
+            id="app-subtitle"
+            position="0 -0.1 0"
+            text="font: dejavu; align: center; width: 1; color: #0F184E; value: Read as you Feel!"
+          ></a-entity>
+        </a-entity>
+
+        <!--Background-->
+        <a-entity 
+        id="by"
+        position="0 0.83 -1"
+        text="font: dejavu; align: center; width: 1; color: #0F184E; value: Gagan"
+        > </a-entity>
+        <a-entity
+        id="camera-cursor"
+        cursor
+        position=" 0 0 -1"
+        geometry="primitive:circle;radius:0.01"
+        material="color:#1fe030; shader:flat"
+        ></a-entity>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
